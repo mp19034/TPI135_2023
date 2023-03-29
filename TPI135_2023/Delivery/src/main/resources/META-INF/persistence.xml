@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="tpi135_2023.ingenieria.occ.ues.edu.sv_Delivery_war_1.0.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.Sucursal</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.EntregaHistorial</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.Producto</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.TipoComercio</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.OrdenDetalle</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.Comercio</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.ProductoTipoProducto</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.ProductoComercio</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.Orden</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.TipoProducto</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.TipoProductoTipoComercio</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.Pago</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.Vehiculo</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.Cliente</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.OrdenEstado</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.Entrega</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.MenuComercio</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.Factura</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.Direccion</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.Repartidor</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.ComercioTipoComercio</class>
+    <class>tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.entities.Territorio</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres"/>
+      <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="oomars2401"/>
+    </properties>
+  </persistence-unit>
+</persistence>
