@@ -2,14 +2,19 @@
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/Direccion.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/EntregaHistorial.java
 <<<<<<< HEAD
+<<<<<<< HEAD
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/Boundary/ComercioTipoComercioBean.java
 =======
 >>>>>>> b32f2cb848d989d681a5ed47ff292796cdce29e7
+=======
+/home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/Boundary/ComercioTipoComercioBean.java
+>>>>>>> MP19034
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/ProductoComercioPK.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/TipoProductoTipoComercio.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/ProductoTipoProducto.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/Pago.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/ProductoComercio.java
+<<<<<<< HEAD
 <<<<<<< HEAD
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/control/ComercioBean.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/Cliente.java
@@ -18,12 +23,18 @@
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/Boundary/ComercioBean.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/Cliente.java
 >>>>>>> b32f2cb848d989d681a5ed47ff292796cdce29e7
+=======
+/home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/control/ComercioBean.java
+/home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/Cliente.java
+/home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/control/AbstractDataAccess.java
+>>>>>>> MP19034
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/Territorio.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/TipoProducto.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/TipoComercio.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/OrdenEstado.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/ProductoTipoProductoPK.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/Boundary/RestResourcePattern.java
+<<<<<<< HEAD
 <<<<<<< HEAD
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/Boundary/TerritorioBean.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/Factura.java
@@ -35,6 +46,12 @@
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/ComercioTipoComercioPK.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/Boundary/AppConfig.java
 >>>>>>> b32f2cb848d989d681a5ed47ff292796cdce29e7
+=======
+/home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/Boundary/TerritorioBean.java
+/home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/Factura.java
+/home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/MenuComercio.java
+/home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/ComercioTipoComercioPK.java
+>>>>>>> MP19034
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/Repartidor.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/OrdenDetalle.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/Producto.java
@@ -47,7 +64,12 @@
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/TipoProductoTipoComercioPK.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/entity/Comercio.java
 <<<<<<< HEAD
+<<<<<<< HEAD
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/Boundary/DireccionBean.java
 /home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/Boundary/SucursalBean.java
 =======
 >>>>>>> b32f2cb848d989d681a5ed47ff292796cdce29e7
+=======
+/home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/Boundary/DireccionBean.java
+/home/edwin/Documentos/NetbeansProjects/TPI135_2023/Delivery/src/main/java/tpi135_2023/ingenieria/occ/ues/edu/sv/Delivery/Boundary/SucursalBean.java
+>>>>>>> MP19034

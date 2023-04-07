@@ -72,10 +72,14 @@ public class ComercioIT {
 
     @Container
 <<<<<<< HEAD
+<<<<<<< HEAD
     static GenericContainer payara = new GenericContainer("payara/micro:6.2023.1")
 =======
     static GenericContainer payara = new GenericContainer("payara/full_pg:6.2023.1")
 >>>>>>> b32f2cb848d989d681a5ed47ff292796cdce29e7
+=======
+    static GenericContainer payara = new GenericContainer("payara/micro:6.2023.1")
+>>>>>>> MP19034
             .withEnv("POSTGRES_USER", "postgres")
             .withEnv("POSTGRES_PASSWORD", "oomars2401")
             .withEnv("POSTGRES_PORT", "5432")
@@ -110,9 +114,13 @@ public class ComercioIT {
         creado.setActivo(Boolean.TRUE);
         creado.setNombre("Farmacia Santa Maria");
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 >>>>>>> b32f2cb848d989d681a5ed47ff292796cdce29e7
+=======
+        
+>>>>>>> MP19034
         Response respuesta = target.path("comercio").request(MediaType.APPLICATION_JSON)
                 .post(Entity.entity(creado, MediaType.APPLICATION_JSON));
         Assertions.assertEquals(esperado, respuesta.getStatus());
