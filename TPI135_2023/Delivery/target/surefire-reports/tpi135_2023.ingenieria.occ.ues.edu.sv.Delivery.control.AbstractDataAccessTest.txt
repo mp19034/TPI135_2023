@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.AbstractDataAccessTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.942 s <<< FAILURE! - in tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.AbstractDataAccessTest
-testcrear on testcrear(tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.AbstractDataAccessTest)(tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.AbstractDataAccessTest)  Time elapsed: 0.043 s  <<< FAILURE!
-java.lang.RuntimeException: Uncompilable source code - Erroneous sym type: tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.AbstractDataAccess.<init>
-	at tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.AbstractDataAccessTest.testcrear(AbstractDataAccessTest.java:30)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.893 s - in tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.AbstractDataAccessTest
