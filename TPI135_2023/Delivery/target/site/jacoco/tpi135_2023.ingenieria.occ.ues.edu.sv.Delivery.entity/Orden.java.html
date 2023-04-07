@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Orden.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Delivery</a> &gt; <a href="index.source.html" class="el_package">tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity</a> &gt; <span class="el_source">Orden.java</span></div><h1>Orden.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity;
+
+import java.io.Serializable;
+import java.math.BigInteger;
+import java.util.Collection;
+import java.util.Date;
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+/**
+ *
+ * @author edwin
+ */
+@Entity
+@Table(name = &quot;orden&quot;)
+@NamedQueries({
+    @NamedQuery(name = &quot;Orden.findAll&quot;, query = &quot;SELECT o FROM Orden o&quot;),
+    @NamedQuery(name = &quot;Orden.findByIdOrden&quot;, query = &quot;SELECT o FROM Orden o WHERE o.idOrden = :idOrden&quot;),
+    @NamedQuery(name = &quot;Orden.findByFechaOrden&quot;, query = &quot;SELECT o FROM Orden o WHERE o.fechaOrden = :fechaOrden&quot;),
+    @NamedQuery(name = &quot;Orden.findByObservaciones&quot;, query = &quot;SELECT o FROM Orden o WHERE o.observaciones = :observaciones&quot;),
+    @NamedQuery(name = &quot;Orden.findByIdDireccion&quot;, query = &quot;SELECT o FROM Orden o WHERE o.idDireccion = :idDireccion&quot;)})
+public class Orden implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = &quot;id_orden&quot;)
+    private Long idOrden;
+    @Column(name = &quot;fecha_orden&quot;)
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date fechaOrden;
+    @Column(name = &quot;observaciones&quot;)
+    private String observaciones;
+    @Column(name = &quot;id_direccion&quot;)
+    private BigInteger idDireccion;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = &quot;orden&quot;)
+    private Collection&lt;OrdenDetalle&gt; ordenDetalleCollection;
+    @OneToMany(mappedBy = &quot;idOrden&quot;)
+    private Collection&lt;Factura&gt; facturaCollection;
+    @OneToMany(mappedBy = &quot;idOrden&quot;)
+    private Collection&lt;OrdenEstado&gt; ordenEstadoCollection;
+    @OneToMany(mappedBy = &quot;idOrden&quot;)
+    private Collection&lt;Entrega&gt; entregaCollection;
+    @JoinColumn(name = &quot;id_cliente&quot;, referencedColumnName = &quot;id_cliente&quot;)
+    @ManyToOne
+    private Cliente idCliente;
+    @JoinColumn(name = &quot;id_sucursal&quot;, referencedColumnName = &quot;id_sucursal&quot;)
+    @ManyToOne
+    private Sucursal idSucursal;
+
+<span class="nc" id="L70">    public Orden() {</span>
+<span class="nc" id="L71">    }</span>
+
+<span class="nc" id="L73">    public Orden(Long idOrden) {</span>
+<span class="nc" id="L74">        this.idOrden = idOrden;</span>
+<span class="nc" id="L75">    }</span>
+
+    public Long getIdOrden() {
+<span class="nc" id="L78">        return idOrden;</span>
+    }
+
+    public void setIdOrden(Long idOrden) {
+<span class="nc" id="L82">        this.idOrden = idOrden;</span>
+<span class="nc" id="L83">    }</span>
+
+    public Date getFechaOrden() {
+<span class="nc" id="L86">        return fechaOrden;</span>
+    }
+
+    public void setFechaOrden(Date fechaOrden) {
+<span class="nc" id="L90">        this.fechaOrden = fechaOrden;</span>
+<span class="nc" id="L91">    }</span>
+
+    public String getObservaciones() {
+<span class="nc" id="L94">        return observaciones;</span>
+    }
+
+    public void setObservaciones(String observaciones) {
+<span class="nc" id="L98">        this.observaciones = observaciones;</span>
+<span class="nc" id="L99">    }</span>
+
+    public BigInteger getIdDireccion() {
+<span class="nc" id="L102">        return idDireccion;</span>
+    }
+
+    public void setIdDireccion(BigInteger idDireccion) {
+<span class="nc" id="L106">        this.idDireccion = idDireccion;</span>
+<span class="nc" id="L107">    }</span>
+
+    public Collection&lt;OrdenDetalle&gt; getOrdenDetalleCollection() {
+<span class="nc" id="L110">        return ordenDetalleCollection;</span>
+    }
+
+    public void setOrdenDetalleCollection(Collection&lt;OrdenDetalle&gt; ordenDetalleCollection) {
+<span class="nc" id="L114">        this.ordenDetalleCollection = ordenDetalleCollection;</span>
+<span class="nc" id="L115">    }</span>
+
+    public Collection&lt;Factura&gt; getFacturaCollection() {
+<span class="nc" id="L118">        return facturaCollection;</span>
+    }
+
+    public void setFacturaCollection(Collection&lt;Factura&gt; facturaCollection) {
+<span class="nc" id="L122">        this.facturaCollection = facturaCollection;</span>
+<span class="nc" id="L123">    }</span>
+
+    public Collection&lt;OrdenEstado&gt; getOrdenEstadoCollection() {
+<span class="nc" id="L126">        return ordenEstadoCollection;</span>
+    }
+
+    public void setOrdenEstadoCollection(Collection&lt;OrdenEstado&gt; ordenEstadoCollection) {
+<span class="nc" id="L130">        this.ordenEstadoCollection = ordenEstadoCollection;</span>
+<span class="nc" id="L131">    }</span>
+
+    public Collection&lt;Entrega&gt; getEntregaCollection() {
+<span class="nc" id="L134">        return entregaCollection;</span>
+    }
+
+    public void setEntregaCollection(Collection&lt;Entrega&gt; entregaCollection) {
+<span class="nc" id="L138">        this.entregaCollection = entregaCollection;</span>
+<span class="nc" id="L139">    }</span>
+
+    public Cliente getIdCliente() {
+<span class="nc" id="L142">        return idCliente;</span>
+    }
+
+    public void setIdCliente(Cliente idCliente) {
+<span class="nc" id="L146">        this.idCliente = idCliente;</span>
+<span class="nc" id="L147">    }</span>
+
+    public Sucursal getIdSucursal() {
+<span class="nc" id="L150">        return idSucursal;</span>
+    }
+
+    public void setIdSucursal(Sucursal idSucursal) {
+<span class="nc" id="L154">        this.idSucursal = idSucursal;</span>
+<span class="nc" id="L155">    }</span>
+
+    @Override
+    public int hashCode() {
+<span class="nc" id="L159">        int hash = 0;</span>
+<span class="nc bnc" id="L160" title="All 2 branches missed.">        hash += (idOrden != null ? idOrden.hashCode() : 0);</span>
+<span class="nc" id="L161">        return hash;</span>
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+<span class="nc bnc" id="L167" title="All 2 branches missed.">        if (!(object instanceof Orden)) {</span>
+<span class="nc" id="L168">            return false;</span>
+        }
+<span class="nc" id="L170">        Orden other = (Orden) object;</span>
+<span class="nc bnc" id="L171" title="All 8 branches missed.">        if ((this.idOrden == null &amp;&amp; other.idOrden != null) || (this.idOrden != null &amp;&amp; !this.idOrden.equals(other.idOrden))) {</span>
+<span class="nc" id="L172">            return false;</span>
+        }
+<span class="nc" id="L174">        return true;</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="nc" id="L179">        return &quot;tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entities.Orden[ idOrden=&quot; + idOrden + &quot; ]&quot;;</span>
+    }
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

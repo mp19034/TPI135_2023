@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Factura.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Delivery</a> &gt; <a href="index.source.html" class="el_package">tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity</a> &gt; <span class="el_source">Factura.java</span></div><h1>Factura.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity;
+
+import java.io.Serializable;
+import java.util.Collection;
+import java.util.Date;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+/**
+ *
+ * @author edwin
+ */
+@Entity
+@Table(name = &quot;factura&quot;)
+@NamedQueries({
+    @NamedQuery(name = &quot;Factura.findAll&quot;, query = &quot;SELECT f FROM Factura f&quot;),
+    @NamedQuery(name = &quot;Factura.findByNumeroFactura&quot;, query = &quot;SELECT f FROM Factura f WHERE f.numeroFactura = :numeroFactura&quot;),
+    @NamedQuery(name = &quot;Factura.findByFechaEmision&quot;, query = &quot;SELECT f FROM Factura f WHERE f.fechaEmision = :fechaEmision&quot;),
+    @NamedQuery(name = &quot;Factura.findByAnulada&quot;, query = &quot;SELECT f FROM Factura f WHERE f.anulada = :anulada&quot;),
+    @NamedQuery(name = &quot;Factura.findByObservaciones&quot;, query = &quot;SELECT f FROM Factura f WHERE f.observaciones = :observaciones&quot;)})
+public class Factura implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    @Id
+    @Basic(optional = false)
+    @Column(name = &quot;numero_factura&quot;)
+    private String numeroFactura;
+    @Column(name = &quot;fecha_emision&quot;)
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date fechaEmision;
+    @Column(name = &quot;anulada&quot;)
+    private Boolean anulada;
+    @Column(name = &quot;observaciones&quot;)
+    private String observaciones;
+    @OneToMany(mappedBy = &quot;numeroFactura&quot;)
+    private Collection&lt;Pago&gt; pagoCollection;
+    @JoinColumn(name = &quot;id_orden&quot;, referencedColumnName = &quot;id_orden&quot;)
+    @ManyToOne
+    private Orden idOrden;
+
+<span class="nc" id="L56">    public Factura() {</span>
+<span class="nc" id="L57">    }</span>
+
+<span class="nc" id="L59">    public Factura(String numeroFactura) {</span>
+<span class="nc" id="L60">        this.numeroFactura = numeroFactura;</span>
+<span class="nc" id="L61">    }</span>
+
+    public String getNumeroFactura() {
+<span class="nc" id="L64">        return numeroFactura;</span>
+    }
+
+    public void setNumeroFactura(String numeroFactura) {
+<span class="nc" id="L68">        this.numeroFactura = numeroFactura;</span>
+<span class="nc" id="L69">    }</span>
+
+    public Date getFechaEmision() {
+<span class="nc" id="L72">        return fechaEmision;</span>
+    }
+
+    public void setFechaEmision(Date fechaEmision) {
+<span class="nc" id="L76">        this.fechaEmision = fechaEmision;</span>
+<span class="nc" id="L77">    }</span>
+
+    public Boolean getAnulada() {
+<span class="nc" id="L80">        return anulada;</span>
+    }
+
+    public void setAnulada(Boolean anulada) {
+<span class="nc" id="L84">        this.anulada = anulada;</span>
+<span class="nc" id="L85">    }</span>
+
+    public String getObservaciones() {
+<span class="nc" id="L88">        return observaciones;</span>
+    }
+
+    public void setObservaciones(String observaciones) {
+<span class="nc" id="L92">        this.observaciones = observaciones;</span>
+<span class="nc" id="L93">    }</span>
+
+    public Collection&lt;Pago&gt; getPagoCollection() {
+<span class="nc" id="L96">        return pagoCollection;</span>
+    }
+
+    public void setPagoCollection(Collection&lt;Pago&gt; pagoCollection) {
+<span class="nc" id="L100">        this.pagoCollection = pagoCollection;</span>
+<span class="nc" id="L101">    }</span>
+
+    public Orden getIdOrden() {
+<span class="nc" id="L104">        return idOrden;</span>
+    }
+
+    public void setIdOrden(Orden idOrden) {
+<span class="nc" id="L108">        this.idOrden = idOrden;</span>
+<span class="nc" id="L109">    }</span>
+
+    @Override
+    public int hashCode() {
+<span class="nc" id="L113">        int hash = 0;</span>
+<span class="nc bnc" id="L114" title="All 2 branches missed.">        hash += (numeroFactura != null ? numeroFactura.hashCode() : 0);</span>
+<span class="nc" id="L115">        return hash;</span>
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+<span class="nc bnc" id="L121" title="All 2 branches missed.">        if (!(object instanceof Factura)) {</span>
+<span class="nc" id="L122">            return false;</span>
+        }
+<span class="nc" id="L124">        Factura other = (Factura) object;</span>
+<span class="nc bnc" id="L125" title="All 8 branches missed.">        if ((this.numeroFactura == null &amp;&amp; other.numeroFactura != null) || (this.numeroFactura != null &amp;&amp; !this.numeroFactura.equals(other.numeroFactura))) {</span>
+<span class="nc" id="L126">            return false;</span>
+        }
+<span class="nc" id="L128">        return true;</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="nc" id="L133">        return &quot;tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entities.Factura[ numeroFactura=&quot; + numeroFactura + &quot; ]&quot;;</span>
+    }
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
