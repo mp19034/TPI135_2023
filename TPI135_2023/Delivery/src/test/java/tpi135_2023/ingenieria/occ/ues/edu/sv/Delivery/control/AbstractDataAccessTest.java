@@ -41,6 +41,37 @@ public class AbstractDataAccessTest {
         // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
     }
+    @Test
+    public void testFindByid() throws Exception {
+        System.out.println("findByid");
+        int id = 1;
+        EntityManager mockME = Mockito.mock(EntityManager.class);
+
+        ComercioBean cut = new ComercioBean();
+        Comercio esperado = new Comercio();
+
+        Mockito.when(mockME.find(Comercio.class, id)).thenReturn(esperado);
+        assertThrows(IllegalArgumentException.class, () -> {
+            cut.findById(null);
+        });
+        assertThrows(IllegalStateException.class, () -> {
+            cut.findById(id);
+        });
+        cut.em = mockME;
+        Comercio encontrado = cut.findById(id);
+        assertNotNull(encontrado);
+        assertEquals(esperado, encontrado);
+        
+        ComercioBean espia = Mockito.spy(ComercioBean.class);
+        espia.em=mockME;
+    
+        Mockito.when(espia.getEntityManager()).thenThrow(NullPointerException.class);
+        try {
+            espia.findById(id);
+        } catch (Exception ex) {
+        }
+        Mockito.verify(espia,Mockito.times(1)).getEntityManager();
+    }
 
 
 }

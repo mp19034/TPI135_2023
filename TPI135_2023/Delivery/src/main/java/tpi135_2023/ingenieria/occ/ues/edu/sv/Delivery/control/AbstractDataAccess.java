@@ -15,6 +15,12 @@ import javax.persistence.EntityManager;
 public abstract class AbstractDataAccess<T> implements Serializable {
 
     public abstract EntityManager getEntityManager();
+    
+    protected final Class clase;
+
+    public AbstractDataAccess(Class clase) {
+        this.clase = clase;
+    }
 
     public void crear(T nuevo) throws IllegalArgumentException, IllegalStateException {
         if (nuevo != null) {
@@ -33,6 +39,20 @@ public abstract class AbstractDataAccess<T> implements Serializable {
                 }
             }
             throw new IllegalStateException("NO SE PUEDE TENER UN AMBITO DE PERSISTENCIA 2");
+        }
+        throw new IllegalArgumentException();
+    }
+    public T findById(final Object id) throws IllegalArgumentException, IllegalStateException {
+        if (id != null) {
+            EntityManager em = null;
+            try {
+                em = this.getEntityManager();
+            } catch (Exception ex) {
+            }
+            if (em != null) {
+                return (T) em.find(clase, id);
+            }
+            throw new IllegalStateException("NO SE PUEDE TENER UN AMBITO DE PERSISTENCIA");
         }
         throw new IllegalArgumentException();
     }
