@@ -2,22 +2,20 @@
 <testng-results total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-07T05:08:31Z" name="Surefire suite" finished-at="2023-04-07T05:08:35Z" duration-ms="4230">
+  <suite started-at="2023-04-07T05:37:29Z" name="Surefire suite" finished-at="2023-04-07T05:37:31Z" duration-ms="2004">
     <groups>
     </groups>
-    <test started-at="2023-04-07T05:08:31Z" name="Surefire test" finished-at="2023-04-07T05:08:35Z" duration-ms="4230">
+    <test started-at="2023-04-07T05:37:29Z" name="Surefire test" finished-at="2023-04-07T05:37:31Z" duration-ms="2004">
       <class name="tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.AbstractDataAccessTest">
-        <test-method signature="testcrear()[pri:0, instance:testcrear(tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.AbstractDataAccessTest)]" started-at="2023-04-06T23:08:31Z" name="testcrear" finished-at="2023-04-06T23:08:35Z" duration-ms="3826" status="PASS">
+        <test-method signature="testcrear()[pri:0, instance:testcrear(tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.AbstractDataAccessTest)]" started-at="2023-04-06T23:37:29Z" name="testcrear" finished-at="2023-04-06T23:37:31Z" duration-ms="1710" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testcrear -->
+        <test-method signature="testFindByid()[pri:0, instance:testFindByid(tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.AbstractDataAccessTest)]" started-at="2023-04-06T23:37:31Z" name="testFindByid" finished-at="2023-04-06T23:37:31Z" duration-ms="202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindByid -->
       </class> <!-- tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.AbstractDataAccessTest -->
-      <class name="tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.ComercioBeanTest">
-        <test-method signature="testcrear()[pri:0, instance:testcrear(tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.ComercioBeanTest)]" started-at="2023-04-06T23:08:35Z" name="testcrear" finished-at="2023-04-06T23:08:35Z" duration-ms="8" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testcrear -->
-      </class> <!-- tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control.ComercioBeanTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>

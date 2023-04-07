@@ -125,14 +125,14 @@ public class Comercio implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-<span class="nc bnc" id="L128" title="All 2 branches missed.">        if (!(object instanceof Comercio)) {</span>
+<span class="pc bpc" id="L128" title="1 of 2 branches missed.">        if (!(object instanceof Comercio)) {</span>
 <span class="nc" id="L129">            return false;</span>
         }
-<span class="nc" id="L131">        Comercio other = (Comercio) object;</span>
-<span class="nc bnc" id="L132" title="All 8 branches missed.">        if ((this.idComercio == null &amp;&amp; other.idComercio != null) || (this.idComercio != null &amp;&amp; !this.idComercio.equals(other.idComercio))) {</span>
+<span class="fc" id="L131">        Comercio other = (Comercio) object;</span>
+<span class="pc bpc" id="L132" title="5 of 8 branches missed.">        if ((this.idComercio == null &amp;&amp; other.idComercio != null) || (this.idComercio != null &amp;&amp; !this.idComercio.equals(other.idComercio))) {</span>
 <span class="nc" id="L133">            return false;</span>
         }
-<span class="nc" id="L135">        return true;</span>
+<span class="fc" id="L135">        return true;</span>
     }
 
     @Override

@@ -8,7 +8,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 import tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity.Comercio;
 import tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity.Orden;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2023-04-06T23:08:26")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2023-04-06T23:35:24")
 @StaticMetamodel(Sucursal.class)
 public class Sucursal_ { 
 

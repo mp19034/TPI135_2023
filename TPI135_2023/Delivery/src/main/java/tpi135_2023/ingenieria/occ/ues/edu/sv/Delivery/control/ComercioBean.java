@@ -30,7 +30,11 @@ public  class ComercioBean extends AbstractDataAccess<Comercio> implements Seria
       @Override
     public EntityManager getEntityManager(){
         return em;
-    }    
+    }  
+    
+    public ComercioBean() {
+        super(Comercio.class);
+    }
 //    @GET
 //    public String Comercio() {
 //        return "Hola mundo TPI135_2023";

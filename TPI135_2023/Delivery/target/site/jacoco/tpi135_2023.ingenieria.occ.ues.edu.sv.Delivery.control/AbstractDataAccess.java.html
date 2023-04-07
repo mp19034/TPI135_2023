@@ -12,29 +12,49 @@ import javax.persistence.EntityManager;
  *
  * @author edwin
  */
-<span class="fc" id="L15">public abstract class AbstractDataAccess&lt;T&gt; implements Serializable {</span>
+public abstract class AbstractDataAccess&lt;T&gt; implements Serializable {
 
     public abstract EntityManager getEntityManager();
+    
+    protected final Class clase;
+
+<span class="fc" id="L21">    public AbstractDataAccess(Class clase) {</span>
+<span class="fc" id="L22">        this.clase = clase;</span>
+<span class="fc" id="L23">    }</span>
 
     public void crear(T nuevo) throws IllegalArgumentException, IllegalStateException {
-<span class="fc bfc" id="L20" title="All 2 branches covered.">        if (nuevo != null) {</span>
-<span class="fc" id="L21">            EntityManager em = null;</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">        if (nuevo != null) {</span>
+<span class="fc" id="L27">            EntityManager em = null;</span>
             try {
-<span class="fc" id="L23">                em = this.getEntityManager();</span>
-<span class="nc" id="L24">            } catch (Exception ex) {</span>
-<span class="nc" id="L25">                throw new IllegalStateException(&quot;NO SE PUEDE TENER UN AMBITO DE PERSISTENCIA 1&quot;);</span>
-<span class="fc" id="L26">            }</span>
-<span class="fc bfc" id="L27" title="All 2 branches covered.">            if (em != null) {</span>
+<span class="fc" id="L29">                em = this.getEntityManager();</span>
+<span class="nc" id="L30">            } catch (Exception ex) {</span>
+<span class="nc" id="L31">                throw new IllegalStateException(&quot;NO SE PUEDE TENER UN AMBITO DE PERSISTENCIA 1&quot;);</span>
+<span class="fc" id="L32">            }</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">            if (em != null) {</span>
                 try {
-<span class="fc" id="L29">                    em.persist(nuevo);</span>
-<span class="fc" id="L30">                    return;</span>
-<span class="nc" id="L31">                } catch (Exception ex) {</span>
-<span class="nc" id="L32">                    throw new IllegalStateException(&quot;NO SE PUEDE ALMACENAR EL REGISTRO&quot;, ex);</span>
+<span class="fc" id="L35">                    em.persist(nuevo);</span>
+<span class="fc" id="L36">                    return;</span>
+<span class="nc" id="L37">                } catch (Exception ex) {</span>
+<span class="nc" id="L38">                    throw new IllegalStateException(&quot;NO SE PUEDE ALMACENAR EL REGISTRO&quot;, ex);</span>
                 }
             }
-<span class="fc" id="L35">            throw new IllegalStateException(&quot;NO SE PUEDE TENER UN AMBITO DE PERSISTENCIA 2&quot;);</span>
+<span class="fc" id="L41">            throw new IllegalStateException(&quot;NO SE PUEDE TENER UN AMBITO DE PERSISTENCIA 2&quot;);</span>
         }
-<span class="fc" id="L37">        throw new IllegalArgumentException();</span>
+<span class="fc" id="L43">        throw new IllegalArgumentException();</span>
+    }
+    public T findById(final Object id) throws IllegalArgumentException, IllegalStateException {
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        if (id != null) {</span>
+<span class="fc" id="L47">            EntityManager em = null;</span>
+            try {
+<span class="fc" id="L49">                em = this.getEntityManager();</span>
+<span class="fc" id="L50">            } catch (Exception ex) {</span>
+<span class="fc" id="L51">            }</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">            if (em != null) {</span>
+<span class="fc" id="L53">                return (T) em.find(clase, id);</span>
+            }
+<span class="fc" id="L55">            throw new IllegalStateException(&quot;NO SE PUEDE TENER UN AMBITO DE PERSISTENCIA&quot;);</span>
+        }
+<span class="fc" id="L57">        throw new IllegalArgumentException();</span>
     }
 
 }
