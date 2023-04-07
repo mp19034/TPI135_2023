@@ -39,9 +39,9 @@ public class Comercio implements Serializable {
     @Basic(optional = false)
     @Column(name = "id_comercio")
     private Long idComercio;
-    @Column(name = "nombre")
+    @Column(name = "nombre")//x
     private String nombre;
-    @Column(name = "activo")
+    @Column(name = "activo")//x
     private Boolean activo;
     @Column(name = "descripcion")
     private String descripcion;
