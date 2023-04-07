@@ -6,8 +6,6 @@
 package tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control;
 
 import java.io.Serializable;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 
 /**

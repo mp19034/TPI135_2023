@@ -22,7 +22,7 @@ import tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity.Comercio;
 //@Path(&quot;comercio&quot;)//seria los endpoint
 @Stateless
 @LocalBean
-public  class ComercioBean extends AbstractDataAccess&lt;Comercio&gt; implements Serializable {
+<span class="fc" id="L25">public  class ComercioBean extends AbstractDataAccess&lt;Comercio&gt; implements Serializable {</span>
     
     @PersistenceContext(unitName = &quot;Delivery_2023&quot;)
     EntityManager em;
@@ -30,19 +30,7 @@ public  class ComercioBean extends AbstractDataAccess&lt;Comercio&gt; implements
       @Override
     public EntityManager getEntityManager(){
 <span class="fc" id="L32">        return em;</span>
-    }
-
-    public ComercioBean() {
-<span class="fc" id="L36">        super(Comercio.class);</span>
-<span class="fc" id="L37">    }</span>
-
-  
-    
-  
-    
-    
-    
-    
+    }    
 //    @GET
 //    public String Comercio() {
 //        return &quot;Hola mundo TPI135_2023&quot;;

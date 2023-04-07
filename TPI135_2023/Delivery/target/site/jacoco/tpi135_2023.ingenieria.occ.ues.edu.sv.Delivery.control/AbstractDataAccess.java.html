@@ -6,59 +6,35 @@
 package tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.control;
 
 import java.io.Serializable;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 
 /**
  *
  * @author edwin
  */
-public abstract class AbstractDataAccess&lt;T&gt; implements Serializable {
+<span class="fc" id="L15">public abstract class AbstractDataAccess&lt;T&gt; implements Serializable {</span>
 
     public abstract EntityManager getEntityManager();
-    
-    protected final Class clase;
-
-<span class="fc" id="L23">    public AbstractDataAccess(Class clase) {</span>
-<span class="fc" id="L24">        this.clase = clase;</span>
-<span class="fc" id="L25">    }</span>
-
 
     public void crear(T nuevo) throws IllegalArgumentException, IllegalStateException {
-<span class="fc bfc" id="L29" title="All 2 branches covered.">        if (nuevo != null) {</span>
-<span class="fc" id="L30">            EntityManager em = null;</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        if (nuevo != null) {</span>
+<span class="fc" id="L21">            EntityManager em = null;</span>
             try {
-<span class="fc" id="L32">                em = this.getEntityManager();</span>
-<span class="nc" id="L33">            } catch (Exception ex) {</span>
-<span class="nc" id="L34">                throw new IllegalStateException(&quot;NO SE PUEDE TENER UN AMBITO DE PERSISTENCIA 1&quot;);</span>
-<span class="fc" id="L35">            }</span>
-<span class="fc bfc" id="L36" title="All 2 branches covered.">            if (em != null) {</span>
+<span class="fc" id="L23">                em = this.getEntityManager();</span>
+<span class="nc" id="L24">            } catch (Exception ex) {</span>
+<span class="nc" id="L25">                throw new IllegalStateException(&quot;NO SE PUEDE TENER UN AMBITO DE PERSISTENCIA 1&quot;);</span>
+<span class="fc" id="L26">            }</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">            if (em != null) {</span>
                 try {
-<span class="fc" id="L38">                    em.persist(nuevo);</span>
-<span class="fc" id="L39">                    return;</span>
-<span class="nc" id="L40">                } catch (Exception ex) {</span>
-<span class="nc" id="L41">                    throw new IllegalStateException(&quot;NO SE PUEDE ALMACENAR EL REGISTRO&quot;, ex);</span>
+<span class="fc" id="L29">                    em.persist(nuevo);</span>
+<span class="fc" id="L30">                    return;</span>
+<span class="nc" id="L31">                } catch (Exception ex) {</span>
+<span class="nc" id="L32">                    throw new IllegalStateException(&quot;NO SE PUEDE ALMACENAR EL REGISTRO&quot;, ex);</span>
                 }
             }
-<span class="fc" id="L44">            throw new IllegalStateException(&quot;NO SE PUEDE TENER UN AMBITO DE PERSISTENCIA 2&quot;);</span>
+<span class="fc" id="L35">            throw new IllegalStateException(&quot;NO SE PUEDE TENER UN AMBITO DE PERSISTENCIA 2&quot;);</span>
         }
-<span class="fc" id="L46">        throw new IllegalArgumentException();</span>
-    }
-    
-     public T findById(final Object id) throws IllegalArgumentException, IllegalStateException {
-<span class="fc bfc" id="L50" title="All 2 branches covered.">        if (id != null) {</span>
-<span class="fc" id="L51">            EntityManager em = null;</span>
-            try {
-<span class="fc" id="L53">                em = this.getEntityManager();</span>
-<span class="fc" id="L54">            } catch (Exception ex) {</span>
-<span class="fc" id="L55">            }</span>
-<span class="fc bfc" id="L56" title="All 2 branches covered.">            if (em != null) {</span>
-<span class="fc" id="L57">                return (T) em.find(clase, id);</span>
-            }
-<span class="fc" id="L59">            throw new IllegalStateException(&quot;NO SE PUEDE TENER UN AMBITO DE PERSISTENCIA&quot;);</span>
-        }
-<span class="fc" id="L61">        throw new IllegalArgumentException();</span>
+<span class="fc" id="L37">        throw new IllegalArgumentException();</span>
     }
 
 }
