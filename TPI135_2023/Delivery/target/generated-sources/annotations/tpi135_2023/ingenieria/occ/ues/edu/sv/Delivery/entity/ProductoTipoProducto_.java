@@ -8,7 +8,7 @@ import tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity.Producto;
 import tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity.ProductoTipoProductoPK;
 import tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity.TipoProducto;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2023-04-04T01:49:49")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2023-04-06T17:09:55")
 @StaticMetamodel(ProductoTipoProducto.class)
 public class ProductoTipoProducto_ { 
 

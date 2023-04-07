@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Orden_.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Delivery</a> &gt; <a href="index.source.html" class="el_package">tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity</a> &gt; <span class="el_source">Orden_.java</span></div><h1>Orden_.java</h1><pre class="source lang-java linenums">package tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity;
+
+import java.math.BigInteger;
+import java.util.Date;
+import javax.annotation.Generated;
+import javax.persistence.metamodel.CollectionAttribute;
+import javax.persistence.metamodel.SingularAttribute;
+import javax.persistence.metamodel.StaticMetamodel;
+import tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity.Cliente;
+import tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity.Entrega;
+import tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity.Factura;
+import tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity.OrdenDetalle;
+import tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity.OrdenEstado;
+import tpi135_2023.ingenieria.occ.ues.edu.sv.Delivery.entity.Sucursal;
+
+@Generated(value=&quot;EclipseLink-2.5.2.v20140319-rNA&quot;, date=&quot;2023-04-06T17:09:55&quot;)
+@StaticMetamodel(Orden.class)
+<span class="nc" id="L18">public class Orden_ { </span>
+
+    public static volatile SingularAttribute&lt;Orden, Sucursal&gt; idSucursal;
+    public static volatile SingularAttribute&lt;Orden, BigInteger&gt; idDireccion;
+    public static volatile SingularAttribute&lt;Orden, Cliente&gt; idCliente;
+    public static volatile CollectionAttribute&lt;Orden, OrdenEstado&gt; ordenEstadoCollection;
+    public static volatile SingularAttribute&lt;Orden, String&gt; observaciones;
+    public static volatile CollectionAttribute&lt;Orden, Entrega&gt; entregaCollection;
+    public static volatile SingularAttribute&lt;Orden, Long&gt; idOrden;
+    public static volatile SingularAttribute&lt;Orden, Date&gt; fechaOrden;
+    public static volatile CollectionAttribute&lt;Orden, OrdenDetalle&gt; ordenDetalleCollection;
+    public static volatile CollectionAttribute&lt;Orden, Factura&gt; facturaCollection;
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
